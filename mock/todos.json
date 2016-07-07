@@ -1,0 +1,26 @@
+[
+   {
+      "name":"clean the house",
+      "priority":"cLow"
+   },
+   {
+      "name":"water the dog",
+      "priority":"bMedium"
+   },
+   {
+      "name":"feed the lawn",
+      "priority":"bMedium"
+   },
+   {
+      "name":"pay dem bills",
+      "priority":"aHigh"
+   },
+   {
+      "name":"run",
+      "priority":"aHigh"
+   },
+   {
+      "name":"swim",
+      "priority":"cLow"
+   }
+]

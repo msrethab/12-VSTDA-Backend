@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Very Simple Todo App - Backend</title>
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="bower_components/toastr/toastr.css" />
+    <!-- endbower -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="/app/styles/styles.css">
+    <!-- endinject -->
+</head>
+
+<body ng-controller="TodosController as vm">
+    <!-- bower:js -->
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/toastr/toastr.js"></script>
+    <!-- endbower -->
+    <!-- Creating a title Header -->
+    <header>
+        <h1>Very Simple Todo App - Now with 100% More Databases!</h1>
+    </header>
+    <!-- Create in-line form with inputs on one side and table on the other side -->
+    <div class="container">
+        <!-- Create form for accepting new todos with add name, priority selector and submit button-->
+        <form class="col-xs-4">
+            <div class="panel panel-info">
+                <div class="panel-heading">Add Todo Item</div>
+                <div class="panel-body">
+	                <div class="todoTextInput">
+	                    <label for="todoText">Text</label>
+	                    <input type="text" class="form-control" id="todoText" ng-model="todoName" placeholder="Enter Todo Text.">
+	                </div>
+	                <div class="prioritySelectInput">
+	                    <label for="prioritySelect">Priority</label>
+	                    <select class="form-control" id="prioritySelect" ng-model="todoPriority">
+	                        <option class="cLow" value="cLow">Low Priority</option>
+	                        <option class="bMedium" value="bMedium">Medium Priority</option>
+	                        <option class="aHigh" value="aHigh">High Priority</option>
+	                    </select>
+	                </div>
+                </div>
+                <div class="panel-footer button">
+                    <button type="submit" ng-click="vm.addTodo(todoName, todoPriority); todoName ='';" class="btn btn-primary">Add Todo</button>
+                </div>
+            </div>
+        </form>
+        <!-- Create table to display todo list and sort buttons -->
+        <div class="col-xs-8">
+            <div class="input-group-btn button">
+                <button type="button" class="btn btn-primary button" ng-click="property = 'priority'; reverse = false">Order by Highest Priority</button>
+                <button type="button" class="btn btn-primary button" ng-click="property = '-priority'; reverse = false">Order by Lowest Priority</button>
+                <button type="button" class="btn btn-primary button" ng-click="property = '-name'; reverse = !reverse">Order Alphabetically</button>
+            </div>
+            <div class="panel panel-info todoList">
+            	<div class="panel-heading">Todo List</div>
+	            <table class="table">
+	                <tbody id="todoTable">
+	                    <tr ng-repeat="data in vm.todos | orderBy: property : reverse" ng-class="{'editing-item': editing, 'edited': todo.edited, 'priority': {{data.priority}}}" class="{{data.priority}}">
+	                        <td class="col-xs-6">
+	                            <div edit-in-place="data.name" on-save="vm.updateItemProp(value, data,'name'); todo.edited = true"></div>
+	                        </td>
+	                        <td class="tools col-xs-2">
+	                        	<a href="" ng-hide = "selecting" ng-click="selecting = !selecting">edit priority</a>
+	                        	<select ng-show = "selecting" ng-blur="selecting = false;" class="editPriority" ng-model="data.priority">
+			                        <option class="cLow" value="cLow">Low</option>
+			                        <option class="bMedium" value="bMedium">Medium</option>
+			                        <option class="aHigh" value="aHigh">High</option>
+			                    </select>
+	                        	<a href="" ng-click="vm.updateTodo(data); todo.edited = false" class="glyphicon glyphicon-floppy-disk"></a>
+	                        	<a href="" ng-click="vm.deleteTodo(data)" class="glyphicon glyphicon-remove"></a>
+	                        </td>
+	                    </tr>
+	                </tbody>
+	            </table>
+            </div>
+        </div>
+    </div>
+    <!-- Create a copyright footer -->
+    <footer class="centFooter">
+        <p>&copy; 2016 Mark Srethabhakti.</p>
+    </footer>
+    <!-- inject:js -->
+    <script src="/app/app.js"></script>
+    <script src="/app/edit/editInPlace.js"></script>
+    <script src="/app/todos/todos.controller.js"></script>
+    <script src="/app/todos/todos.factory.js"></script>
+    <!-- endinject -->
+</body>
+
+</html>

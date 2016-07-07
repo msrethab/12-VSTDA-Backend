@@ -1,0 +1,93 @@
+
+
+/* Styling the header */
+
+h1{
+	margin-bottom: 2.5%;
+  	text-align: center;
+}
+
+/* Styling input Form */
+
+.todoTextInput{
+	margin-bottom: 5%;
+
+}
+
+.panel-heading{
+	font-weight: bold;
+	font-size: 1.5em;
+}
+
+/* the edit-in-place directive displays either a span */
+/* or an input element, depending on the active class. */
+.edit-in-place > span {
+  cursor: pointer;
+}
+
+.edit-in-place > input,
+.edit-in-place > textarea {
+  display: none;
+}
+
+.edit-in-place.active > span {
+  display: none;
+}
+
+.edit-in-place.active > input,
+.edit-in-place.active > textarea {
+  display: inline-block;
+}
+
+
+/* Styling the Todo List */
+
+.todoList{
+	margin: 2.5% 0 2.5%;
+
+}
+
+.tools{
+	text-align: right;
+
+}
+
+.aHigh {
+	background-color: rgba(255, 82, 82, .3);
+}
+
+.bMedium {
+	background-color: rgba(255, 243, 82, .3);
+}
+
+.cLow {
+	background-color: rgba(82, 191, 255, .3);
+}
+
+/* Adds Styling to indicate when Todos have been Edited*/
+
+.edited{
+	font-style: italic;
+}
+
+.edited span:after{
+	content: "(edited)";
+	text-transform: uppercase;
+	padding-left: 5px;
+}
+
+/* Styling the footer */
+
+.centFooter {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+}
+
+footer {
+  font-size: 0.75em;
+  clear: both;
+  padding-top: 50px
+  color: #ccc;
+  text-align: center;
+}
