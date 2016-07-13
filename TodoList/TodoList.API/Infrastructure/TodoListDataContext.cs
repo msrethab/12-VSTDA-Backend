@@ -1,7 +1,5 @@
 ﻿using System.Data.Entity;
-using System.Data.Entity.Design.PluralizationServices;
 using System.Data.Entity.ModelConfiguration.Conventions;
-using System.Globalization;
 using TodoList.API.Models;
 
 namespace TodoList.API.Infrastructure
@@ -14,6 +12,8 @@ namespace TodoList.API.Infrastructure
         }
 
         public IDbSet<Todo> Todos { get; set; }
+
+        //Overrides normal entity Pluralizing conventions and names my table manually
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

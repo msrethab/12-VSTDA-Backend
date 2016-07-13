@@ -40,11 +40,8 @@ C:\dev\12-VSTDA-Backend\TodoList\TodoList.API\bin\Newtonsoft.Json.xml
 C:\dev\12-VSTDA-Backend\TodoList\TodoList.API\bin\System.Net.Http.Formatting.xml
 C:\dev\12-VSTDA-Backend\TodoList\TodoList.API\bin\System.Web.Http.xml
 C:\dev\12-VSTDA-Backend\TodoList\TodoList.API\bin\System.Web.Http.WebHost.xml
-C:\dev\12-VSTDA-Backend\TodoList\TodoList.API\obj\Debug\TodoList.API.csprojResolveAssemblyReference.cache
-C:\dev\12-VSTDA-Backend\TodoList\TodoList.API\obj\Debug\TodoList.API.dll
-C:\dev\12-VSTDA-Backend\TodoList\TodoList.API\obj\Debug\TodoList.API.pdb
-C:\dev\12-VSTDA-Backend\TodoList\TodoList.API\bin\System.Web.Cors.dll
-C:\dev\12-VSTDA-Backend\TodoList\TodoList.API\bin\System.Web.Http.Cors.dll
-C:\dev\12-VSTDA-Backend\TodoList\TodoList.API\bin\System.Web.Http.Cors.xml
 C:\dev\12-VSTDA-Backend\TodoList\TodoList.API\obj\Debug\TodoList.API.Migrations.InitialMigration.resources
 C:\dev\12-VSTDA-Backend\TodoList\TodoList.API\obj\Debug\TodoList.API.csproj.GenerateResource.Cache
+C:\dev\12-VSTDA-Backend\TodoList\TodoList.API\obj\Debug\TodoList.API.dll
+C:\dev\12-VSTDA-Backend\TodoList\TodoList.API\obj\Debug\TodoList.API.pdb
+C:\dev\12-VSTDA-Backend\TodoList\TodoList.API\obj\Debug\TodoList.API.csprojResolveAssemblyReference.cache

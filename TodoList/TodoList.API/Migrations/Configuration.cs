@@ -1,10 +1,7 @@
 namespace TodoList.API.Migrations
 {
     using Models;
-    using System;
-    using System.Data.Entity;
     using System.Data.Entity.Migrations;
-    using System.Linq;
 
     internal sealed class Configuration : DbMigrationsConfiguration<TodoList.API.Infrastructure.TodoListDataContext>
     {
@@ -12,6 +9,8 @@ namespace TodoList.API.Migrations
         {
             AutomaticMigrationsEnabled = false;
         }
+
+        //Seeds database with sample todos
 
         protected override void Seed(TodoList.API.Infrastructure.TodoListDataContext context)
         {

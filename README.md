@@ -17,3 +17,13 @@ Version 1.0.0
 -Connected angular VSTDA app to database allowing view changes to be saved to TodoList Database
 
 -Full functionality in Google Chrome and IE Edge bypassing CORS errors
+
+
+
+Version 1.0.1
+
+-Rewrote web.config to send custom headers bypassing CORS issues
+
+-Full functionality on Google Chrome without use of Allow CORS plugin
+
+-Cleaned up dependencies for C# resulting in fewer extraneous lines

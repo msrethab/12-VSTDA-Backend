@@ -2,8 +2,6 @@
 using Newtonsoft.Json.Serialization;
 using System.Linq;
 using System.Web.Http;
-using System.Web.Http.Cors;
-using TodoList.API.Handler;
 
 namespace TodoList.API
 {
@@ -12,10 +10,6 @@ namespace TodoList.API
         public static void Register(HttpConfiguration config)
         {
             // Web API configuration and services
-            config.EnableCors(new EnableCorsAttribute("http://localhost:8080", "*", "*"));
-
-            // Add handler to deal with preflight requests, this is the important part
-            config.MessageHandlers.Add(new PreflightRequestsHandler());
 
             // Web API routes
             config.MapHttpAttributeRoutes();
